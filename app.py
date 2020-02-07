@@ -9,8 +9,8 @@ from xml.etree import ElementTree as ET
 mqtt_broker = "10.0.3.11"
 
 #config
-username            = '' #your portal username [= email-address]
-password            = '' #your portal password
+username            = 'matthew@thenicholsclan.com' #your portal username [= email-address]
+password            = '123456' #your portal password
 baseURL             = 'http://www.solarmanpv.com:10000' #base url
 stationid           = '88533' #station id, get this via the station python script
 mqtt_broker         = "10.0.3.11" #Location of MQTT Broker
@@ -19,7 +19,7 @@ mqtt_broker         = "10.0.3.11" #Location of MQTT Broker
 #       http://www.ginlongmonitoring.com:10000/
 #       http://www.omnikportal.com:10000/
 #       http://log.trannergy.com:10000/
-#       http://www.solarmanpv.com:10000/    
+#       http://www.solarmanpv.com:10000/
 # Line 16
 
 m = hashlib.md5()
@@ -36,7 +36,7 @@ try:
   token = root.find('token').text
   print(('Logged In: '+username))
 
-except urllib.request.UrlError as e:
+except urllib.request.urlerror as e:
   print ('Not logged in: ERROR')
   print (e)
   exit()
@@ -80,9 +80,9 @@ actualpowerstr=str(round(ActualPower1000,2))
 values = {
             "ActualPowerKw": actualpowerstr,
             "ActualPower": ActualPower, 
-            "etoday_KW": etotal,
-            "etotal_KW": etotal,
-            "etotal_KW": lux
+            "etoday_KWh": etotal,
+            "etotal_KWh": etotal,
+            "etotal_MWh": etotal1000str
         } 
 json_output = json.dumps(values)
 
