@@ -9,8 +9,8 @@ from xml.etree import ElementTree as ET
 mqtt_broker = "10.0.3.11"
 
 #config
-username            = 'matthew@thenicholsclan.com' #your portal username [= email-address]
-password            = '123456' #your portal password
+username            = '' #your portal username [= email-address]
+password            = '' #your portal password
 baseURL             = 'http://www.solarmanpv.com:10000' #base url
 stationid           = '88533' #station id, get this via the station python script
 mqtt_broker         = "10.0.3.11" #Location of MQTT Broker
