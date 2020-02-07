@@ -1,0 +1,10 @@
+version: '2.1'
+
+services:
+  solarmanpv-2-mqtt:
+    image: solarmanpv-2-mqtt
+    build:
+      context: .
+      dockerfile: Dockerfile
+    ports:
+      - 3000:3000
